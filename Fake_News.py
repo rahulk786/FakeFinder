@@ -17,7 +17,7 @@ myCommands = {
 # context. Error handlers also receive the raised TelegramError object in error.
 def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
-    update.message.reply_text('OCR Bot is working....')
+    update.message.reply_text('OCR Bot for detecting fake news is working....')
 
 
 def help(update: Update, context: CallbackContext) -> None:
