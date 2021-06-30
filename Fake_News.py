@@ -36,6 +36,7 @@ def read_image(update: Update, context: CallbackContext) -> None:
         img_name = str(chat_id)+'.jpg'
         photo_file.download(img_name)
         output=pytesseract.image_to_string(Image.open(img_name))
+        #Output is generated from the image and is a string 
         if output:
             update.message.reply_text('`'+str(output)+'`\n\nImage to Text Generated', parse_mode=ParseMode.MARKDOWN, reply_to_message_id = update.message.message_id)
         else:
