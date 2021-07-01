@@ -42,7 +42,7 @@ def read_image(update: Update, context: CallbackContext) -> None:
         else:
             update.message.reply_text("No text found")
     except Exception as e:
-        update.message.reply_text("Error Occured: `"+str(e)+"`")
+        update.message.reply_text("Please Resend, Error Occured: `"+str(e)+"`")
     finally:
         try:
             os.remove(img_name)
